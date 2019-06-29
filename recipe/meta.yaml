@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = '0.3.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,22 +7,22 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: metR_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/metR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metR/metR_{{ version }}.tar.gz
-  sha256: f4ad389ed1948a82fa9d5d66004d2ee75bdb7441534d511f94c0eb1f8521e852
+  sha256: de0745d561858be173bcf651958f7d49b4e48105819274a7484ed0d970767536
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-formula
@@ -35,7 +35,7 @@ requirements:
     - r-dplyr
     - r-fields
     - r-formula.tools
-    - r-ggplot2
+    - r-ggplot2 >=3.0.0
     - r-gridextra
     - r-gtable
     - r-lubridate
@@ -58,7 +58,7 @@ requirements:
     - r-dplyr
     - r-fields
     - r-formula.tools
-    - r-ggplot2
+    - r-ggplot2 >=3.0.0
     - r-gridextra
     - r-gtable
     - r-lubridate
@@ -86,10 +86,30 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
     - apcamargo
+    - conda-forge/r
+
+# Type: Package
+# Package: metR
+# Title: Tools for Easier Analysis of Meteorological Fields
+# Version: 0.3.0
+# Date: 2019-03-12
+# Authors@R:  c(person(given = "Elio", family = "Campitelli", role = c("cre", "aut"), email = "elio.campitelli@cima.fcen.uba.ar", comment = c(ORCID = "0000-0002-7742-9230")))
+# Description: Many useful functions and extensions for dealing with meteorological data in the tidy data framework. Extends 'ggplot2' for better plotting of scalar and vector fields and provides commonly used analysis methods in the atmospheric sciences.
+# License: GPL-3
+# URL: https://github.com/eliocamp/metR
+# BugReports: https://github.com/eliocamp/metR/issues
+# Depends: R (>= 2.10)
+# Imports: checkmate, curl, data.table, digest, dplyr, fields, Formula, formula.tools, ggplot2 (>= 3.0.0), grid, gridExtra, gtable, lubridate, maps, maptools, Matrix, memoise, plyr, RCurl, scales, sp, stringr
+# Suggests: covr, irlba, knitr, ncdf4, pkgdown, reshape2, rmarkdown, testthat, udunits2, vdiffr, viridis
+# ByteCompile: yes
+# Encoding: UTF-8
+# LazyData: true
+# RoxygenNote: 6.1.1
+# VignetteBuilder: knitr
+# NeedsCompilation: no
+# Packaged: 2019-03-12 19:39:47 UTC; elio
+# Author: Elio Campitelli [cre, aut] (<https://orcid.org/0000-0002-7742-9230>)
+# Maintainer: Elio Campitelli <elio.campitelli@cima.fcen.uba.ar>
+# Repository: CRAN
+# Date/Publication: 2019-03-12 22:40:06 UTC
