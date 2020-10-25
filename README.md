@@ -5,11 +5,9 @@ Home: https://github.com/eliocamp/metR
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-metr-feedstock/blob/master/LICENSE.txt)
 
 Summary: Many useful functions and extensions for dealing with meteorological data in the tidy data framework. Extends 'ggplot2' for better plotting of scalar and vector fields and provides commonly used analysis methods in the atmospheric sciences.
-
-
 
 Current build status
 ====================
