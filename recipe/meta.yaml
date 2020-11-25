@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metR/metR_{{ version }}.tar.gz
-  sha256: f8bfe5b25dd857b1a6d351c50c3d55e2ba2270e56c2300278d339e95fad33f53
+  sha256: 31afe5740ab4e3477e9cfed37a86bb5aa0d0c82753263969231ec0c4a8b40f69
 
 build:
   merge_build_host: true  # [win]
@@ -77,10 +77,11 @@ test:
 
 about:
   home: https://github.com/eliocamp/metR
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Many useful functions and extensions for dealing with meteorological data in the tidy data framework. Extends 'ggplot2' for better plotting of scalar and vector fields and provides commonly used analysis methods in the atmospheric sciences.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
