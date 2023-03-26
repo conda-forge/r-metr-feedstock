@@ -1,11 +1,11 @@
-About r-metr
-============
+About r-metr-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-metr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/eliocamp/metR
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-metr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Many useful functions and extensions for dealing with meteorological data in the tidy data framework. Extends 'ggplot2' for better plotting of scalar and vector fields and provides commonly used analysis methods in the atmospheric sciences.
 
