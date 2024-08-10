@@ -1,6 +1,5 @@
 {% set version = "0.15.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-metr
@@ -13,8 +12,7 @@ source:
   sha256: e02a5a4acccfbe8531e891819cfe955676d2ede896bcd7bfeb2d41d4a5e9109f
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
