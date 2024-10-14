@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metR/metR_{{ version }}.tar.gz
-  sha256: e02a5a4acccfbe8531e891819cfe955676d2ede896bcd7bfeb2d41d4a5e9109f
+  sha256: b795ac6c097b850332a1db10e6758a84108fc60618a63120c52411dcdf7e355e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
