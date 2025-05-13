@@ -1,4 +1,4 @@
-{% set version = "0.18.0" %}
+{% set version = "0.18.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metR/metR_{{ version }}.tar.gz
-  sha256: 5907717b02fbf23476ab486c04a7b934aa786214cc5ea6f8fa0fc464e185127f
+  sha256: 59dcf581378a89e46cd7a28837aacb7ae874a428791f351929465407648ce977
 
 build:
   number: 0
